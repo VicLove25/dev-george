@@ -1,0 +1,18 @@
+[
+    { "id": 1, "name": "Brandon Ingram", "position": "Forward" },
+    { "id": 2, "name": "Zion Williamson", "position": "Forward" },
+    { "id": 3, "name": "CJ McCollum", "position": "Guard" },
+    { "id": 4, "name": "Herbert Jones", "position": "Forward" },
+    { "id": 5, "name": "Trey Murphy III", "position": "Guard" },
+    { "id": 6, "name": "Yves Missi", "position": "Center" },
+    { "id": 7, "name": "Jordan Hawkins", "position": "Guard" },
+    { "id": 8, "name": "Brandon Boston", "position": "Guard" },
+    { "id": 9, "name": "Jose Alvarado", "position": "Guard" },
+    { "id": 10, "name": "Antonio Reeves", "position": "Guard" },
+    { "id": 11, "name": "Daniel Theis", "position": "Center" },
+    { "id": 12, "name": "Javonte Green", "position": "Forward" },
+    { "id": 13, "name": "Jeremiah Robinson-Earl", "position": "Forward" },
+    { "id": 14, "name": "Karlo Matkovic", "position": "Center" },
+    { "id": 15, "name": "Keion Brooks Jr.", "position": "Forward" },
+    { "id": 16, "name": "Jamal Cain", "position": "Forward" }
+]

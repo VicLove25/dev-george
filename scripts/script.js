@@ -31,47 +31,50 @@ $(document).ready(function() {
                               </div>`);
             dataContainer.append(playerDiv);
         });
+    
 
         // Edit and Delete Buttons
-        $('.edit-btn').on('click', function() {
-            const itemDiv = $(this).closest('.player-item');
-            const itemId = parseInt(itemDiv.data('id'));
-            const player = playerData.find(p => p.id === itemId);
+    $('.edit-btn').on('click', function() {
+        console.log('edittt');
+        const itemDiv = $(this).closest('.player-item');
+        const itemId = parseInt(itemDiv.data('id'));
+        const player = playerData.find(p => p.id === itemId);
 
-            if (player) {
-                itemDiv.html(`
-                    <input type="text" class="form-control mb-2 edit-name" value="${player.name}">
-                    <input type="text" class="form-control mb-2 edit-position" value="${player.position}">
-                    <button class="btn btn-sm btn-success save-edit-btn">Save</button>
-                    <button class="btn btn-sm btn-secondary cancel-edit-btn">Cancel</button>
-                `);
+        if (player) {
+            itemDiv.html(`
+                <input type="text" class="form-control mb-2 edit-name" value="${player.name}">
+                <input type="text" class="form-control mb-2 edit-position" value="${player.position}">
+                <button class="btn btn-sm btn-success save-edit-btn">Save</button>
+                <button class="btn btn-sm btn-secondary cancel-edit-btn">Cancel</button>
+            `);
 
-                itemDiv.find('.save-edit-btn').on('click', function() {
-                    const newName = itemDiv.find('.edit-name').val();
-                    const newPosition = itemDiv.find('.edit-position').val();
-                    const playerIndex = playerData.findIndex(p => p.id === itemId);
+            itemDiv.find('.save-edit-btn').on('click', function() {
+                const newName = itemDiv.find('.edit-name').val();
+                const newPosition = itemDiv.find('.edit-position').val();
+                const playerIndex = playerData.findIndex(p => p.id === itemId);
 
-                    if (playerIndex !== -1) {
-                        playerData[playerIndex] = { id: itemId, name: newName, position: newPosition };
-                        displayPlayerData(playerData); 
-                    }
-                });
+                if (playerIndex !== -1) {
+                    playerData[playerIndex] = { id: itemId, name: newName, position: newPosition };
+                    displayPlayerData(playerData); 
+                }
+            });
 
-                itemDiv.find('.cancel-edit-btn').on('click', function() {
-                    displayPlayerData(playerData);
-                });
-            }
-        });
+            itemDiv.find('.cancel-edit-btn').on('click', function() {
+                displayPlayerData(playerData);
+            });
+        }
+    });
 
-        $('.delete-btn').on('click', function() {
-            const itemIdToDelete = parseInt($(this).closest('.player-item').data('id'));
-            playerIdToDelete = itemIdToDelete;
-            deleteConfirmationModal.show();
-        });
-    }
+    $('.delete-btn').on('click', function() {
+        const itemIdToDelete = parseInt($(this).closest('.player-item').data('id'));
+        playerIdToDelete = itemIdToDelete;
+        deleteConfirmationModal.show();
+    });
+     
+};
 
     function loadPlayerData() {
-        fetch('pelicansPotentialData.json')
+        fetch('data/pelicansPotentialData.json')
             .then(response => response.json())
             .then(jsonData => {
                 playerData = jsonData;
@@ -145,11 +148,13 @@ $(document).ready(function() {
 
     // Export Data
     exportDataBtn.on('click', function() {
+        console.log('anythgion');
         console.log(JSON.stringify(playerData, null, 2));
     });
-    exportDataBtn.on('click', function() {
-        console.log('Export button clicked!');
-    });
+    // exportDataBtn.on('click', function() {
+    //     console.log('Export button clicked!');
+    // });
 
     loadPlayerData(); 
+
 });

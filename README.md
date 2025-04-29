@@ -23,6 +23,8 @@ Although unfinished, this app is a remodeled and significantly better previous p
 ### Development Story
 It took me a long time to develop this app, and there's still things I want to add! The hardest part was getting the buttons to work and reformatting the colors on the app. Bootstrap also played a huge part in the app revamp. It made the app look a lot cleaner compared to before. Overall, I feel like the app is still a work in progress and I want to continue to add and make it my best project to date.
 
-### Screenshot
-Original Able App: <img src="images/ogDevAble.png" width='400' height='300' alt="OG Dev Able"/>
-This is what I want my app to look similar to: <img src="images/pelsWeb.png" width='400' height='300' alt="Pelicans Website"/>
+### Original Able App:
+<img src="images/ogDevAble.png" width='400' height='300' alt="OG Dev Able"/>
+
+### This is what I want my app to look similar to:
+<img src="images/pelsWeb.png" width='400' height='300' alt="Pelicans Website"/>
